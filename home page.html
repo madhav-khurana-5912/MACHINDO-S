@@ -1,0 +1,684 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Manchindos Kitchen &amp; Bar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "on-background": "#1b1c1c",
+                "tertiary": "#333430",
+                "surface": "#fbf9f8",
+                "primary-fixed-dim": "#ffb3b1",
+                "outline": "#897270",
+                "surface-container-high": "#e9e8e7",
+                "surface-container-low": "#f5f3f3",
+                "on-secondary-fixed-variant": "#474746",
+                "on-surface": "#1b1c1c",
+                "on-secondary-container": "#636262",
+                "on-tertiary-fixed": "#1b1c19",
+                "on-primary-fixed": "#410007",
+                "tertiary-fixed-dim": "#c8c6c2",
+                "on-surface-variant": "#564241",
+                "inverse-on-surface": "#f2f0f0",
+                "primary-fixed": "#ffdad8",
+                "on-tertiary-container": "#bbb9b5",
+                "surface-container-lowest": "#ffffff",
+                "on-error": "#ffffff",
+                "background": "#fbf9f8",
+                "secondary-container": "#e2dfde",
+                "error": "#ba1a1a",
+                "inverse-surface": "#303031",
+                "on-secondary-fixed": "#1c1b1b",
+                "surface-variant": "#e4e2e2",
+                "surface-container": "#efeded",
+                "primary": "#651319",
+                "surface-dim": "#dbdad9",
+                "error-container": "#ffdad6",
+                "inverse-primary": "#ffb3b1",
+                "surface-tint": "#9f3e40",
+                "on-error-container": "#93000a",
+                "secondary-fixed": "#e5e2e1",
+                "on-primary-container": "#ff9f9d",
+                "outline-variant": "#dcc0bf",
+                "on-tertiary": "#ffffff",
+                "on-tertiary-fixed-variant": "#474744",
+                "on-primary": "#ffffff",
+                "surface-bright": "#fbf9f8",
+                "secondary": "#5f5e5e",
+                "secondary-fixed-dim": "#c8c6c5",
+                "on-primary-fixed-variant": "#80272a",
+                "on-secondary": "#ffffff",
+                "primary-container": "#842a2d",
+                "surface-container-highest": "#e4e2e2",
+                "tertiary-container": "#4a4a47",
+                "tertiary-fixed": "#e4e2dd"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "base": "8px",
+                "margin-desktop": "80px",
+                "section-gap": "64px",
+                "margin-mobile": "20px",
+                "item-gap": "24px",
+                "gutter": "24px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "headline-md": [
+                        "Manrope"
+                ],
+                "body-md": [
+                        "Manrope"
+                ],
+                "headline-lg-mobile": [
+                        "Manrope"
+                ],
+                "body-lg": [
+                        "Manrope"
+                ],
+                "label-sm": [
+                        "Manrope"
+                ],
+                "headline-lg": [
+                        "Manrope"
+                ],
+                "display": [
+                        "Manrope"
+                ]
+        },
+        "fontSize": {
+                "headline-md": [
+                        "20px",
+                        {
+                                "lineHeight": "1.4",
+                                "letterSpacing": "0.1em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "headline-lg-mobile": [
+                        "24px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "1.6",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "1.2",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "1.2",
+                                "fontWeight": "600"
+                        }
+                ],
+                "display": [
+                        "64px",
+                        {
+                                "lineHeight": "1.1",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .maroon-border { border-color: #651319; }
+        .maroon-text { color: #651319; }
+        .maroon-hover:hover { background: #842a2d; border-color: #842a2d; color: #ffffff; }
+        .input-underline { border: none; border-bottom: 0.5px solid #651319; border-radius: 0; background: transparent; }
+        .input-underline:focus { outline: none; box-shadow: none; border-bottom-color: #1b1c1c; }
+        
+        /* Premium Fade-In Animations */
+        @keyframes heroFadeIn {
+          from { opacity: 0; transform: translateY(24px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-hero-fade {
+          animation: heroFadeIn 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+          opacity: 0;
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-700 { animation-delay: 700ms; }
+
+        /* 3D Floating Animation */
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-12px) rotate(2deg); }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .font-serif-display {
+          font-family: 'Playfair Display', Georgia, serif;
+        }
+      </style>
+      <link href="theme.css" rel="stylesheet">
+      <script src="app.js" defer></script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-5 left-1/2 -translate-x-1/2 w-[92%] max-w-6xl z-50 flex justify-between items-center px-8 py-3.5 bg-[#fbf9f8]/80 border border-zinc-200/50 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.06)] rounded-full transition-all duration-300">
+  <a href="home%20page.html" class="text-2xl font-bold tracking-widest text-primary hover:opacity-85 transition-opacity">
+    MACHINDO'S
+  </a>
+  <div class="hidden md:flex gap-8 items-center font-semibold text-xs tracking-widest uppercase text-zinc-700">
+    <a class="nav-link text-primary hover:text-primary transition-colors duration-300 active" href="home%20page.html">Home</a>
+    <a class="nav-link hover:text-primary transition-colors duration-300" href="home%20page.html#story">About Us</a>
+    <div class="relative group">
+      <button class="nav-link flex items-center gap-1 hover:text-primary transition-colors duration-300 uppercase">
+        Menu <span class="material-symbols-outlined text-[16px] leading-none">expand_more</span>
+      </button>
+      <div class="absolute left-0 mt-2 w-48 bg-white border border-zinc-200 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+        <a href="kitchen-menu.html" class="block px-4 py-3 text-xs text-zinc-700 hover:bg-zinc-50 hover:text-primary uppercase tracking-wider">Kitchen Menu</a>
+        <a href="bar-menu.html" class="block px-4 py-3 text-xs text-zinc-700 hover:bg-zinc-50 hover:text-primary uppercase tracking-wider">Bar Menu</a>
+        <a href="signatures-menu.html" class="block px-4 py-3 text-xs text-zinc-700 hover:bg-zinc-50 hover:text-primary uppercase tracking-wider">Signatures</a>
+      </div>
+    </div>
+    <a class="nav-link hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+  </div>
+  
+  <div class="flex items-center gap-6">
+    <button onclick="toggleSearch()" class="text-zinc-700 hover:text-primary transition-colors flex items-center" aria-label="Search">
+      <span class="material-symbols-outlined text-[22px]">search</span>
+    </button>
+    <button onclick="toggleCart()" class="relative text-zinc-700 hover:text-primary transition-colors flex items-center" aria-label="Cart">
+      <span class="material-symbols-outlined text-[22px]">shopping_cart</span>
+      <span id="cart-badge" class="absolute -top-2 -right-2 bg-red-650 text-white font-bold text-[9px] w-4.5 h-4.5 rounded-full flex items-center justify-center hidden badge-pulse">0</span>
+    </button>
+    <a href="#reservation-section" class="bg-primary hover:bg-[#842a2d] border border-primary text-white font-semibold text-[11px] px-6 py-2.5 uppercase tracking-widest transition-colors rounded-full hidden md:block text-center shadow-md">
+      Reservations
+    </a>
+    <button class="md:hidden text-zinc-800 flex items-center" onclick="toggleMobileMenu()">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu" class="fixed inset-0 bg-[#0d0d0d] z-40 transform translate-x-full transition-transform duration-300 flex flex-col justify-center items-center gap-8 md:hidden">
+  <button onclick="toggleMobileMenu()" class="absolute top-6 right-6 text-white text-3xl">&times;</button>
+  <a class="text-2xl font-bold uppercase tracking-wider text-white" href="home%20page.html" onclick="toggleMobileMenu()">Home</a>
+  <a class="text-2xl font-bold uppercase tracking-wider text-zinc-400 hover:text-white" href="home%20page.html#story" onclick="toggleMobileMenu()">About Us</a>
+  <a class="text-2xl font-bold uppercase tracking-wider text-zinc-400 hover:text-white" href="kitchen-menu.html" onclick="toggleMobileMenu()">Kitchen Menu</a>
+  <a class="text-2xl font-bold uppercase tracking-wider text-zinc-400 hover:text-white" href="bar-menu.html" onclick="toggleMobileMenu()">Bar Menu</a>
+  <a class="text-2xl font-bold uppercase tracking-wider text-zinc-400 hover:text-white" href="signatures-menu.html" onclick="toggleMobileMenu()">Signatures</a>
+  <a class="text-2xl font-bold uppercase tracking-wider text-zinc-400 hover:text-white" href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+  <button onclick="toggleLogin(); toggleMobileMenu();" class="border border-zinc-650 text-white font-medium text-[13px] px-8 py-3 uppercase tracking-widest hover:bg-white hover:text-black transition-colors rounded">
+    Login
+  </button>
+</div>
+
+<script>
+  window.toggleMobileMenu = function() {
+    document.getElementById('mobile-menu').classList.toggle('translate-x-0');
+  }
+</script>
+
+<!-- Dark Hero Section -->
+<header class="relative min-h-screen flex flex-col items-center justify-center bg-[#0b0b0b] overflow-hidden">
+  <!-- Background Image with overlay -->
+  <div class="absolute inset-0 z-0 select-none pointer-events-none">
+    <img src="images/gourmet_hero_dish.png" class="w-full h-full object-cover brightness-[0.35]" alt="Machindo's Gourmet Dish">
+    <!-- Dark gradient overlay for optimal text contrast -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#0b0b0b] via-black/35 to-black/60"></div>
+  </div>
+
+  <!-- Watermark Background Typography (HERITAGE RESERVE) -->
+  <div class="absolute top-28 left-6 md:left-12 z-0 font-serif-display text-white/[0.04] text-[60px] sm:text-[90px] md:text-[140px] font-bold uppercase tracking-wider select-none leading-[0.9] pointer-events-none select-none animate-hero-fade delay-300">
+    Heritage<br>Reserve
+  </div>
+
+  <!-- Centered Content Container -->
+  <div class="relative z-10 max-w-4xl mx-auto w-full px-6 md:px-12 flex flex-col items-center text-center pt-24 select-none">
+    <!-- Subtitle: FINE DINING & SPIRITS -->
+    <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.35em] text-[#c29b70] mb-5 animate-hero-fade delay-100">
+      Fine Dining & Spirits
+    </span>
+    
+    <!-- Main Title: MACHINDO'S -->
+    <h1 class="text-5xl sm:text-7xl md:text-[96px] font-bold tracking-[0.16em] text-white leading-none uppercase mb-6 drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)] animate-hero-fade delay-300">
+      MACHINDO'S
+    </h1>
+    
+    <!-- Subtitle: A CULINARY JOURNEY OF FLAVOR & SPIRIT -->
+    <p class="text-[10px] md:text-xs font-semibold uppercase tracking-[0.25em] text-white/90 max-w-xl leading-relaxed mb-10 animate-hero-fade delay-500">
+      A Culinary Journey of Flavor & Spirit
+    </p>
+    
+    <!-- Reserve Table Button -->
+    <a href="#reservation-section" class="bg-primary hover:bg-[#842a2d] border border-primary text-white font-bold text-xs uppercase tracking-[0.25em] px-12 py-4.5 transition-all duration-300 shadow-[0_10px_35px_rgba(101,19,25,0.4)] hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(101,19,25,0.6)] rounded animate-hero-fade delay-700">
+      Reserve a Table
+    </a>
+
+    <!-- Chevron Indicator -->
+    <a href="#story" class="text-white/40 hover:text-white transition-colors duration-300 mt-14 animate-[bounce_2s_infinite] flex items-center justify-center animate-hero-fade delay-700" aria-label="Scroll Down">
+      <span class="material-symbols-outlined text-[24px]">keyboard_arrow_down</span>
+    </a>
+  </div>
+</header>
+
+<!-- New on Menu Section (Slide 2 layout) -->
+<section id="new-on-menu-section" class="py-20 bg-white text-zinc-900 border-t border-zinc-100 scroll-mt-20">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+    <span class="text-red-600 font-bold text-xs uppercase tracking-widest block mb-2">Recents</span>
+    <h2 class="text-3xl md:text-4xl font-extrabold text-zinc-900 mb-16">New on Menu</h2>
+
+    <div class="flex flex-col md:flex-row justify-between items-center gap-12 md:gap-4 mt-12 pb-8 overflow-x-auto">
+      
+      <!-- Plate 1 -->
+      <div onclick="addToCart('Grilled Salmon & Shrimp Steak', 25.00)" class="menu-plate-wrapper reveal reveal-delay-100 flex flex-col items-center cursor-pointer max-w-[200px] flex-shrink-0">
+        <div class="relative w-40 h-40 rounded-full overflow-hidden shadow-lg border-2 border-zinc-100 mb-4 bg-zinc-900">
+          <img class="w-full h-full object-cover" src="images/grilled_salmon.png" alt="Grilled Salmon & Shrimp Steak">
+        </div>
+        <h3 class="font-bold text-sm text-zinc-800 text-center leading-snug min-h-[40px] flex items-center justify-center">
+          Grilled Salmon &<br>Shrimp Steak
+        </h3>
+        <span class="text-red-650 font-extrabold text-base mt-2">$25</span>
+      </div>
+
+      <!-- Plate 2 -->
+      <div onclick="addToCart('Eggplant Bake with Peppers', 18.00)" class="menu-plate-wrapper reveal reveal-delay-200 flex flex-col items-center cursor-pointer max-w-[200px] flex-shrink-0">
+        <div class="relative w-40 h-40 rounded-full overflow-hidden shadow-lg border-2 border-zinc-100 mb-4 bg-zinc-900">
+          <img class="w-full h-full object-cover" src="images/eggplant_bake.png" alt="Eggplant Bake with Peppers">
+        </div>
+        <h3 class="font-bold text-sm text-zinc-800 text-center leading-snug min-h-[40px] flex items-center justify-center">
+          Eggplant Bake with<br>Peppers
+        </h3>
+        <span class="text-red-650 font-extrabold text-base mt-2">$18</span>
+      </div>
+
+      <!-- Plate 3 (Highlighted Center Plate) -->
+      <div onclick="addToCart('Tuna Pasta Sea Food Meal', 45.00)" class="menu-plate-wrapper middle-highlight reveal reveal-delay-300 flex flex-col items-center cursor-pointer max-w-[240px] flex-shrink-0">
+        <div class="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-amber-500 mb-4 bg-zinc-900">
+          <img class="w-full h-full object-cover" src="images/tuna_pasta.png" alt="Tuna Pasta Sea Food Meal">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end justify-center pb-2">
+            <span class="bg-amber-500 text-zinc-900 text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full">Chef Special</span>
+          </div>
+        </div>
+        <h3 class="font-extrabold text-base text-zinc-900 text-center leading-snug min-h-[40px] flex items-center justify-center">
+          Tuna Pasta Sea<br>Food Meal
+        </h3>
+        <span class="text-red-650 font-black text-lg mt-2">$45</span>
+      </div>
+
+      <!-- Plate 4 -->
+      <div onclick="addToCart('Green Tomatoes Fresh Salad', 12.00)" class="menu-plate-wrapper reveal reveal-delay-400 flex flex-col items-center cursor-pointer max-w-[200px] flex-shrink-0">
+        <div class="relative w-40 h-40 rounded-full overflow-hidden shadow-lg border-2 border-zinc-100 mb-4 bg-zinc-900">
+          <img class="w-full h-full object-cover" src="images/green_salad.png" alt="Green Tomatoes Fresh Salad">
+        </div>
+        <h3 class="font-bold text-sm text-zinc-800 text-center leading-snug min-h-[40px] flex items-center justify-center">
+          Green Tomatoes<br>Fresh Salad
+        </h3>
+        <span class="text-red-650 font-extrabold text-base mt-2">$12</span>
+      </div>
+
+      <!-- Plate 5 -->
+      <div onclick="addToCart('Soy Shrimp with Black Pasta', 35.00)" class="menu-plate-wrapper reveal reveal-delay-500 flex flex-col items-center cursor-pointer max-w-[200px] flex-shrink-0">
+        <div class="relative w-40 h-40 rounded-full overflow-hidden shadow-lg border-2 border-zinc-100 mb-4 bg-zinc-900">
+          <img class="w-full h-full object-cover" src="images/soy_shrimp.png" alt="Soy Shrimp with Black Pasta">
+        </div>
+        <h3 class="font-bold text-sm text-zinc-800 text-center leading-snug min-h-[40px] flex items-center justify-center">
+          Soy Shrimp with<br>Black Pasta
+        </h3>
+        <span class="text-red-650 font-extrabold text-base mt-2">$35</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Main Content -->
+<main class="max-w-container-max mx-auto w-full flex flex-col gap-section-gap py-section-gap px-margin-mobile md:px-margin-desktop">
+<!-- Our Story -->
+<section id="story" class="flex flex-col md:flex-row gap-12 items-center scroll-mt-28">
+<div class="w-full md:w-1/2 reveal">
+<h2 class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-4">Our Heritage</h2>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">A Legacy of Taste</h3>
+<p class="text-on-surface-variant font-body-md text-body-md mb-8">
+                    Rooted in tradition but looking toward the future, Manchindos represents the culmination of generations of culinary passion. We believe in the tactile luxury of an exceptional meal, where every ingredient tells a story and every spirit is poured with intention.
+                </p>
+<a class="font-label-sm text-label-sm uppercase tracking-widest border-b border-primary pb-1 hover:text-primary-container hover:border-primary-container transition-colors inline-flex items-center gap-2 text-primary" href="#">
+                    Discover More <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="w-full md:w-1/2 relative reveal reveal-delay-200">
+<div class="absolute inset-0 border-[0.5px] border-primary translate-x-4 translate-y-4"></div>
+<img class="w-full h-[500px] object-cover relative z-10" data-alt="A close-up, high-fidelity shot of an executive chef's hands carefully plating a delicate, modern dish in a pristine, softly lit professional kitchen. The aesthetic is tactile luxury, emphasizing the meticulous detail of the fresh ingredients against a clean, ivory-toned background. The mood is focused and artisanal, reflecting a high-end culinary heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrPQpln_cctbZuv-5AwYZEWnvdmBvRZs5k0NpoomYe-yMOYdwJ48REO8PjyTZ76FDC8367zCFhqHK4ArJVwVZY2lNuL7P7q36fFn4Xr23L3srYIsasN9j3stYqbYHxoIfm1P8U6RWOKCfYgHG_utEvMoHLv4SOkaoZ3TrbVCfIR3oLsTDtpmabsImolGfsDpWIWqtOA139V1QKWDF7sCwmwKhYHO7Q6D6N3ypfDIjtxN3EfqOcRDwtaPYc0oUHGApmHPs5rxzC-Pe3">
+</div>
+</section>
+<!-- The Kitchen & The Bar -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Kitchen -->
+<div class="relative group cursor-pointer overflow-hidden h-[600px] reveal">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A top-down view of a beautifully arranged, rustic yet elegant dining table featuring a variety of high-end signature dishes. The setting includes fine white ceramics on a dark, textured wood surface, lit by soft, natural-feeling light that highlights the vibrant colors of the food. The style conveys exclusivity and sophisticated dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr1HFNKE2mAio46f6cLCWcFYd5B_FnEAesmyfnzR6MPMVgH_b_a0Qyt5VoNSvifGlyziyrcocQLqgv2y-ITas2DPU2YTZpOBDrDzW6-DVGPuNmhL5b0Fbb7t9CBLT_C3PMJl3B81o-kGDdDzPrB2dGG_pZ7pwU6Bbcg-DYvRHX64dyq2jWuk3K40bnSERqxzUq75JCmKG7JDKWD1sdttSPwbre_yxjlLPSZcUNbFn7pugBOS1OeXs2qUrdWzdIhX37y8bGDo9UYKON">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-surface-bright">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary-fixed-dim mb-2 block">The Kitchen</span>
+<h3 class="font-headline-md text-headline-md mb-4">Savor the Craft</h3>
+<p class="font-body-md text-body-md mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">Experience seasonal ingredients transformed into culinary masterpieces.</p>
+<button class="bg-transparent border border-surface-bright px-6 py-2 font-label-sm text-label-sm uppercase hover:bg-surface-bright hover:text-primary transition-colors">View Menu</button>
+</div>
+</div>
+<!-- Bar -->
+<div class="relative group cursor-pointer overflow-hidden h-[600px] reveal reveal-delay-200">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A moody, close-up photograph of a professional mixologist crafting an artisanal cocktail at a dimly lit, high-end bar. The focus is on a crystal glass filled with an amber liquid and ice, surrounded by polished bar tools. The lighting is warm and golden, creating an atmosphere of anticipation and exclusivity typical of a premium speakeasy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8VpjIK_h_UlXqj-FmQgGq7Au2U67HbKUJW20jf7upXzdAqDmWeIwz4obf28RYTMXuBw0G6qGdc1ITk-ngj73R59JZ6338tLOLo3upLv5bRIkSMDsYbiibYrPJ5JnN63VKWXeCYomXORnfUUZJu7qDhgLBic7_lz05GSPIaLNLpFYuWg7qrXmBDSx1rGuvRDulMBsikydNKxmtbsDD2J_BVh4RYnvUnyWaOkMHe84c5jl0OAoEP3Je8JlJ-OC08MdjklryYXcoafvR">
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-surface-bright">
+<span class="font-label-sm text-label-sm tracking-widest uppercase text-primary-fixed-dim mb-2 block">The Bar</span>
+<h3 class="font-headline-md text-headline-md mb-4">Spirits &amp; Stories</h3>
+<p class="font-body-md text-body-md mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">Curated libations and rare finds for the discerning palate.</p>
+<button class="bg-transparent border border-surface-bright px-6 py-2 font-label-sm text-label-sm uppercase hover:bg-surface-bright hover:text-primary transition-colors">View Menu</button>
+</div>
+</div>
+</section>
+<!-- Featured Signatures (Bento/Card layout) -->
+<section class="flex flex-col items-center">
+<h2 class="font-label-sm text-label-sm tracking-widest uppercase text-primary mb-4 text-center">Curated Selection</h2>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-12 text-center">Featured Signatures</h3>
+<div class="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">
+<!-- Signature 1 -->
+<div class="flex flex-col bg-surface-container-lowest border-[0.5px] border-primary/30 p-6 hover:shadow-[0_10px_30px_rgba(28,27,27,0.05)] transition-shadow duration-300 reveal"><div class="flex flex-col h-full justify-between"><div class="mb-6"><h4 class="font-headline-md text-headline-md mb-2">Cucu Sate</h4><div class="flex items-center gap-4 mb-4"><div class="h-px flex-grow bg-primary/30"></div><span class="font-headline-md text-headline-md text-primary">$32</span></div><p class="text-on-surface-variant font-body-md text-body-md">Char-grilled perfection with our heritage spice blend, served with a delicate peanut emulsion.</p></div><div class="pt-4 border-t border-outline-variant/30"><span class="text-label-sm uppercase tracking-widest text-primary">Signature Dish</span></div></div></div>
+<!-- Signature 2 -->
+<div class="flex flex-col bg-surface-container-lowest border-[0.5px] border-primary/30 p-6 hover:shadow-[0_10px_30px_rgba(28,27,27,0.05)] transition-shadow duration-300 reveal reveal-delay-200"><div class="flex flex-col h-full justify-between"><div class="mb-6"><h4 class="font-headline-md text-headline-md mb-2">Almond Old Fashion</h4><div class="flex items-center gap-4 mb-4"><div class="h-px flex-grow bg-primary/30"></div><span class="font-headline-md text-headline-md text-primary">$24</span></div><p class="text-on-surface-variant font-body-md text-body-md">A refined classic featuring toasted almond infused bourbon, smoked bitters, and orange essence.</p></div><div class="pt-4 border-t border-outline-variant/30"><span class="text-label-sm uppercase tracking-widest text-primary">Craft Cocktail</span></div></div></div>
+</div>
+</section>
+<!-- Google Reviews Section -->
+<section id="reviews-section" class="py-16 bg-surface-container-lowest border-t border-b border-outline-variant/30 scroll-mt-28">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <div class="flex flex-col items-center justify-center mb-12">
+      <div class="flex items-center gap-2 mb-3">
+        <svg class="h-6 w-6 text-red-600" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C18.155 1.084 15.42.3 12.24.3 5.782.3.5 5.5.5 12s5.282 11.7 11.74 11.7c6.745 0 11.232-4.717 11.232-11.43 0-.77-.083-1.35-.184-1.985H12.24Z"/>
+        </svg>
+        <span class="font-bold text-xs uppercase tracking-widest text-zinc-500">Google Customer Reviews</span>
+      </div>
+      <h2 class="text-3xl font-extrabold text-primary mb-2">Excellent Haven for the Senses</h2>
+      <div class="flex items-center justify-center gap-2">
+        <span class="text-2xl font-black text-zinc-800">4.6</span>
+        <div class="flex text-amber-500">
+          <span class="material-symbols-outlined fill-1 text-[18px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[18px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[18px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[18px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[18px]">star_half</span>
+        </div>
+        <span class="text-sm text-zinc-500 font-bold">(48 reviews)</span>
+      </div>
+    </div>
+
+    <!-- Review Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-8">
+      
+      <!-- Review 1 -->
+      <div class="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-850 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow reveal">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-700 font-bold text-sm uppercase">
+              PN
+            </div>
+            <div>
+              <h4 class="font-extrabold text-sm text-zinc-800 dark:text-zinc-100">Pranit Nimbalkar</h4>
+              <p class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Local Guide · 24 reviews</p>
+            </div>
+          </div>
+          <span class="text-xs text-zinc-400">1 mo ago</span>
+        </div>
+        <div class="flex text-amber-500 mb-3">
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+        </div>
+        <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed italic">
+          "What an awesome experience! Every dish was bursting with mouth-watering flavor, and the craft beer complimented the authentic Italian taste perfectly. The ambiance is so pleasant and relaxing."
+        </p>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-850 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow reveal reveal-delay-150">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 font-bold text-sm uppercase">
+              TP
+            </div>
+            <div>
+              <h4 class="font-extrabold text-sm text-zinc-800 dark:text-zinc-100">Tarun Poojari</h4>
+              <p class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Local Guide · 151 reviews</p>
+            </div>
+          </div>
+          <span class="text-xs text-zinc-400">2 mo ago</span>
+        </div>
+        <div class="flex text-amber-500 mb-3">
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+        </div>
+        <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed italic">
+          "We visited Manchindos Kitchen & Bar in Baner... From the moment we entered, the cozy aesthetic ambience, live kitchen, and stunning cocktail bar set the perfect vibe for a great dining experience."
+        </p>
+      </div>
+
+      <!-- Review 3 -->
+      <div class="bg-white dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-850 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow reveal reveal-delay-300">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 font-bold text-sm uppercase">
+              AP
+            </div>
+            <div>
+              <h4 class="font-extrabold text-sm text-zinc-800 dark:text-zinc-100">Aakash Patwari</h4>
+              <p class="text-[10px] text-zinc-500 uppercase tracking-widest font-bold">Local Guide · 23 reviews</p>
+            </div>
+          </div>
+          <span class="text-xs text-zinc-400">3 wk ago</span>
+        </div>
+        <div class="flex text-amber-500 mb-3">
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+          <span class="material-symbols-outlined fill-1 text-[14px]">star</span>
+        </div>
+        <p class="text-zinc-650 dark:text-zinc-400 text-sm leading-relaxed italic">
+          "Manchindos weaves a tapestry of delightful tastes, each dish a culinary sonnet. The service, a gentle breeze, anticipates every desire. An atmosphere that whispers elegance and warmth..."
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Reservation Form -->
+<section id="reservation-section" class="w-full max-w-2xl mx-auto bg-surface-container-low p-12 border-[0.5px] border-primary/50 text-center relative scroll-mt-28 reveal">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-surface px-4">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Reserve Your Experience</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Join us for an unforgettable evening.</p>
+<form class="flex flex-col gap-6 text-left">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<input class="w-full input-underline py-3 px-2 font-body-md text-body-md placeholder:font-body-md placeholder:text-outline" placeholder="Name" type="text">
+<input class="w-full input-underline py-3 px-2 font-body-md text-body-md placeholder:font-body-md placeholder:text-outline" placeholder="Phone Number" type="tel">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<input class="w-full input-underline py-3 px-2 font-body-md text-body-md text-outline" type="date">
+<input class="w-full input-underline py-3 px-2 font-body-md text-body-md text-outline" type="time">
+<select class="w-full input-underline py-3 px-2 font-body-md text-body-md text-outline cursor-pointer">
+<option disabled="" selected="" value="">Guests</option>
+<option value="1">1 Person</option>
+<option value="2">2 People</option>
+<option value="3">3 People</option>
+<option value="4">4 People</option>
+<option value="5+">5+ People</option>
+</select>
+</div>
+<button class="mt-8 bg-primary text-on-primary px-8 py-4 border border-primary font-label-sm text-label-sm uppercase tracking-widest maroon-hover transition-all duration-300 mx-auto block" type="button">
+                    Confirm Reservation
+                </button>
+</form>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-gutter bg-tertiary dark:bg-tertiary-container text-surface-bright border-t border-outline/10 font-body-md text-body-md">
+<div class="flex flex-col gap-4">
+<div class="font-headline-lg text-headline-lg text-primary-fixed-dim leading-tight">
+                MANCHINDOS
+                <div class="text-sm text-zinc-400 font-bold mt-1">मंचिंदोस - किचन & बार</div>
+            </div>
+<p class="text-sm opacity-80">© 2024 MANCHINDOS KITCHEN &amp; BAR. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-8 md:gap-16">
+<div class="flex flex-col gap-2">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim mb-2">Links</h4>
+<a class="text-surface-dim hover:text-primary-fixed transition-colors hover:opacity-80" href="#">Hours</a>
+<a class="text-surface-dim hover:text-primary-fixed transition-colors hover:opacity-80" href="#">Location</a>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed-dim mb-2">Connect</h4>
+<a class="text-surface-dim hover:text-primary-fixed transition-colors hover:opacity-80" href="#">Socials</a>
+<a class="text-surface-dim hover:text-primary-fixed transition-colors hover:opacity-80" href="#">Newsletter</a>
+</div>
+</div>
+</footer>
+
+
+<!-- Cart & Modal Templates -->
+<!-- Cart Sidebar Overlay -->
+<div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+<!-- Cart Drawer Panel -->
+<div id="cart-panel" class="cart-panel">
+  <div class="cart-header">
+    <h3 class="font-bold uppercase tracking-widest text-base text-zinc-100 flex items-center gap-2">
+      <span class="material-symbols-outlined">shopping_basket</span> Your Tray
+    </h3>
+    <button onclick="toggleCart()" class="text-zinc-400 hover:text-white transition-colors text-2xl font-bold">&times;</button>
+  </div>
+  
+  <div id="cart-items-list" class="cart-items-container">
+    <!-- Items dynamically rendered by app.js -->
+  </div>
+  
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total:</span>
+      <span class="text-amber-500">$<span id="cart-total-value">0.00</span></span>
+    </div>
+    <button onclick="alert('Order placed successfully! Thank you for dining with Manchindos.')" class="btn-primary-red w-full py-4 text-center font-bold uppercase tracking-widest text-sm rounded shadow-lg">
+      Place Order
+    </button>
+  </div>
+</div>
+
+<!-- Search Modal Overlay -->
+<div id="search-modal-overlay" class="modal-overlay" onclick="toggleSearch()">
+  <div class="modal-container glassmorphism border border-zinc-800 p-6 flex flex-col gap-6" onclick="event.stopPropagation()">
+    <div class="flex justify-between items-center border-b border-zinc-800 pb-3">
+      <h3 class="font-bold text-lg uppercase tracking-wider text-white">Search Heritage Menu</h3>
+      <button onclick="toggleSearch()" class="text-zinc-400 hover:text-white transition-colors text-xl font-bold">&times;</button>
+    </div>
+    <div class="relative">
+      <input id="search-input" type="text" oninput="handleSearchInput(event)" placeholder="Search for dishes, cocktails..." class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-600 rounded px-4 py-3 text-white placeholder-zinc-500 focus:ring-0 focus:outline-none">
+      <span class="material-symbols-outlined absolute right-3 top-3.5 text-zinc-500">search</span>
+    </div>
+    <div id="search-results" class="search-results-list flex flex-col gap-2">
+      <!-- Results rendered dynamically -->
+    </div>
+  </div>
+</div>
+
+<!-- Login Modal Overlay -->
+<div id="login-modal-overlay" class="modal-overlay" onclick="toggleLogin()">
+  <div class="modal-container glassmorphism border border-zinc-800 p-8 flex flex-col" onclick="event.stopPropagation()">
+    <div class="flex justify-between items-center mb-6">
+      <div class="flex gap-4">
+        <button id="tab-btn-login" onclick="switchLoginTab('login')" class="font-bold text-lg border-b-2 border-primary pb-1 text-white">Sign In</button>
+        <button id="tab-btn-register" onclick="switchLoginTab('register')" class="font-bold text-lg border-b-2 border-transparent pb-1 text-zinc-400">Sign Up</button>
+      </div>
+      <button onclick="toggleLogin()" class="text-zinc-400 hover:text-white text-xl">&times;</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="form-login-view" class="space-y-6">
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-zinc-400 font-bold mb-2">Email Address</label>
+        <input type="email" placeholder="you@example.com" class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-600 rounded px-4 py-3 text-white focus:ring-0 focus:outline-none text-sm">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-zinc-400 font-bold mb-2">Password</label>
+        <input type="password" placeholder="••••••••" class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-600 rounded px-4 py-3 text-white focus:ring-0 focus:outline-none text-sm">
+      </div>
+      <button onclick="toggleLogin()" class="btn-primary-red w-full py-3.5 font-bold uppercase tracking-wider text-sm rounded shadow-lg">Sign In</button>
+    </div>
+
+    <!-- Register Form (Hidden initially) -->
+    <div id="form-register-view" class="space-y-6" style="display:none;">
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-zinc-400 font-bold mb-2">Full Name</label>
+        <input type="text" placeholder="John Doe" class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-600 rounded px-4 py-3 text-white focus:ring-0 focus:outline-none text-sm">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-zinc-400 font-bold mb-2">Email Address</label>
+        <input type="email" placeholder="you@example.com" class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-600 rounded px-4 py-3 text-white focus:ring-0 focus:outline-none text-sm">
+      </div>
+      <div>
+        <label class="block text-xs uppercase tracking-wider text-zinc-400 font-bold mb-2">Password</label>
+        <input type="password" placeholder="••••••••" class="w-full bg-zinc-900 border border-zinc-800 focus:border-red-600 rounded px-4 py-3 text-white focus:ring-0 focus:outline-none text-sm">
+      </div>
+      <button onclick="toggleLogin()" class="btn-primary-red w-full py-3.5 font-bold uppercase tracking-wider text-sm rounded shadow-lg">Create Account</button>
+    </div>
+
+    <div class="mt-8 text-center">
+      <span class="text-xs text-zinc-500 font-bold uppercase tracking-wider">Or continue with</span>
+      <div class="grid grid-cols-2 gap-4 mt-4">
+        <button onclick="toggleLogin()" class="flex items-center justify-center gap-2 border border-zinc-800 hover:bg-zinc-800 py-2.5 rounded text-sm transition-colors text-white">
+          <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M12.24 10.285V13.4h6.887c-.275 1.565-1.88 4.604-6.887 4.604-4.33 0-7.866-3.577-7.866-8s3.536-8 7.866-8c2.46 0 4.105 1.025 5.047 1.926l2.427-2.334C18.155 1.084 15.42.3 12.24.3 5.782.3.5 5.5.5 12s5.282 11.7 11.74 11.7c6.745 0 11.232-4.717 11.232-11.43 0-.77-.083-1.35-.184-1.985H12.24Z"/></svg>
+          Google
+        </button>
+        <button onclick="toggleLogin()" class="flex items-center justify-center gap-2 border border-zinc-800 hover:bg-zinc-800 py-2.5 rounded text-sm transition-colors text-white">
+          <svg class="h-4 w-4" viewBox="0 0 24 24"><path fill="currentColor" d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 4.17c.66-.81 1.11-1.93.99-3.06-1 .04-2.22.67-2.94 1.5-.62.71-1.16 1.85-1.01 2.96 1.12.09 2.27-.57 2.96-1.4"/></svg>
+          Apple
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</body></html>
